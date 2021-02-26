@@ -37,11 +37,10 @@
 			</svg>
 		</header>
 
+		<button onclick="dropdownMenu()" class="menu-button">&#9776;</button>
+
 		<ul id="main-menu" class="menu">
 			<!-- This button controls whether the dropdown behavior of the main menu in the mobile version. It is not visible in the desktop version. -->
-			<button onclick="dropdownMenu()" class="menu-button">
-				&#9776;
-			</button>
 
 			<li id="bootcamp" class="submenu">
 				<!-- In desktop, the dropdown menu must appear when the user hovers over this button. In mobile, when the same happens when this button is clicked. -->
@@ -49,18 +48,16 @@
 					Bootcamps <span class="dropdown-triangle"> &#9698; </span>
 				</button>
 
-				<ul class="dropdown">
-					<li><h2>SOFTWARE ENGINEERING IMMERSIVE</h2></li>
+				<ul id="bootcamp-dropdown" class="dropdown">
+					<li>
+						<h2>SOFTWARE ENGINEERING IMMERSIVE</h2>
+					</li>
 					<li><a href="#">Onsite Program</a></li>
-					<hr />
 					<li><a href="#">Remote Program (Live Online)</a></li>
-					<hr />
 					<li>
 						<a href="#"> Part Time Remote Program (Live Online) </a>
 					</li>
-					<hr />
 					<li><a href="#">Campus Locations</a></li>
-					<hr />
 				</ul>
 			</li>
 
@@ -70,7 +67,7 @@
 						&#9698;
 					</span>
 				</button>
-				<ul class="dropdown">
+				<ul id="pd-dropdown" class="dropdown">
 					<li><a href="#">Overview</a></li>
 					<li>
 						<a href="#">Methodologies + Requirements Gathering</a>
@@ -92,7 +89,7 @@
 				<button onclick="dropdownOutcomes()" class="submenu-button">
 					Outcomes<span class="dropdown-triangle"> &#9698; </span>
 				</button>
-				<ul class="dropdown">
+				<ul id="outcomes-dropdown" class="dropdown">
 					<li><a href="#">Student Outcomes</a></li>
 					<li><a href="#">Student Projects </a></li>
 				</ul>
@@ -102,7 +99,7 @@
 				<button onclick="dropdownEvents()" class="submenu-button">
 					Events<span class="dropdown-triangle"> &#9698; </span>
 				</button>
-				<ul class="dropdown">
+				<ul id="events-dropdown" class="dropdown">
 					<li><a href="#">Workshops & Events</a></li>
 					<li><a href="#">Webinars</a></li>
 				</ul>
