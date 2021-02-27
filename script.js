@@ -1,21 +1,58 @@
+let submenus = document.getElementsByClassName('submenu');
+
+function closeOtherSubmenus(openDropdown) {
+	for (let i = 0; i < submenus.length; i++) {
+		let isToggled = submenus[i].classList.contains('show-submenu');
+
+		if (isToggled && openDropdown.id != submenus[i].id) {
+			submenus[i].classList.toggle('show-submenu');
+		}
+	}
+}
+
 function dropdownMenu() {
-	document.getElementById('main-menu').classList.toggle('show-menu');
+	let mainMenuDropdown = document.getElementById('main-menu');
+	mainMenuDropdown.classList.toggle('show-menu');
+	mainMenuDropdown.addEventListener(
+		'click',
+		closeOtherSubmenus(mainMenuDropdown)
+	);
 }
 
 function dropdownBootcamp() {
-	document.getElementById('bootcamp').classList.toggle('show-submenu');
+	const bootcampDropdown = document.getElementById('bootcamp');
+	bootcampDropdown.classList.toggle('show-submenu');
+	bootcampDropdown.addEventListener(
+		'click',
+		closeOtherSubmenus(bootcampDropdown)
+	);
 }
 
 function dropdownPD() {
-	document
-		.getElementById('professional-development')
-		.classList.toggle('show-submenu');
+	let professionalDevDropdown = document.getElementById(
+		'professional-development'
+	);
+	professionalDevDropdown.classList.toggle('show-submenu');
+	professionalDevDropdown.addEventListener(
+		'click',
+		closeOtherSubmenus(professionalDevDropdown)
+	);
 }
 
 function dropdownOutcomes() {
-	document.getElementById('outcomes').classList.toggle('show-submenu');
+	let outcomesDropdown = document.getElementById('outcomes');
+	outcomesDropdown.classList.toggle('show-submenu');
+	outcomesDropdown.addEventListener(
+		'click',
+		closeOtherSubmenus(outcomesDropdown)
+	);
 }
 
 function dropdownEvents() {
-	document.getElementById('events').classList.toggle('show-submenu');
+	let eventsDropdown = document.getElementById('events');
+	eventsDropdown.classList.toggle('show-submenu');
+	eventsDropdown.addEventListener(
+		'click',
+		closeOtherSubmenus(eventsDropdown)
+	);
 }
