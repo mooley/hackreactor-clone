@@ -41,16 +41,14 @@
 				</svg>
 			</header>
 
-			<button onclick="dropdownMenu()" class="menu-button">
-				&#9776;
-			</button>
+			<button class="menu-button">&#9776;</button>
 
 			<ul id="main-menu" class="menu">
 				<!-- This button controls whether the dropdown behavior of the main menu in the mobile version. It is not visible in the desktop version. -->
 
-				<li id="bootcamp" class="submenu hello">
+				<li id="bootcamp" class="submenu">
 					<!-- In desktop, the dropdown menu must appear when the user hovers over this button. In mobile, when the same happens when this button is clicked. -->
-					<button onclick="dropdownBootcamp()" class="submenu-button">
+					<button class="submenu-button">
 						Bootcamps
 						<span class="dropdown-triangle"> &#9698; </span>
 					</button>
@@ -71,7 +69,7 @@
 				</li>
 
 				<li id="professional-development" class="submenu">
-					<button onclick="dropdownPD()" class="submenu-button">
+					<button class="submenu-button">
 						Professional Development<span class="dropdown-triangle">
 							&#9698;
 						</span>
@@ -99,7 +97,7 @@
 				</li>
 
 				<li id="outcomes" class="submenu">
-					<button onclick="dropdownOutcomes()" class="submenu-button">
+					<button class="submenu-button">
 						Outcomes<span class="dropdown-triangle"> &#9698; </span>
 					</button>
 					<ul id="outcomes-dropdown" class="dropdown">
@@ -109,7 +107,7 @@
 				</li>
 
 				<li id="events" class="submenu">
-					<button onclick="dropdownEvents()" class="submenu-button">
+					<button class="submenu-button">
 						Events<span class="dropdown-triangle"> &#9698; </span>
 					</button>
 					<ul id="events-dropdown" class="dropdown">
@@ -124,7 +122,6 @@
 	</header>
 
 	<body>
-		<div id="red-square"></div>
 		<script src="script.js"></script>
 	</body>
 </html>

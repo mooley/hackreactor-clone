@@ -1,4 +1,10 @@
+// Elements
+
+let mainMenu = document.getElementById('main-menu');
+let mainMenuButton = document.getElementsByClassName('menu-button')[0];
 let submenus = document.getElementsByClassName('submenu');
+
+// Functions
 
 function closeOtherSubmenus(openDropdown) {
 	for (let i = 0; i < submenus.length; i++) {
@@ -10,49 +16,27 @@ function closeOtherSubmenus(openDropdown) {
 	}
 }
 
-function dropdownMenu() {
-	let mainMenuDropdown = document.getElementById('main-menu');
-	mainMenuDropdown.classList.toggle('show-menu');
-	mainMenuDropdown.addEventListener(
-		'click',
-		closeOtherSubmenus(mainMenuDropdown)
-	);
+function toggleMainMenu() {
+	mainMenu.classList.toggle('show-menu');
+	closeOtherSubmenus(mainMenu);
 }
 
-function dropdownBootcamp() {
-	const bootcampDropdown = document.getElementById('bootcamp');
-	bootcampDropdown.classList.toggle('show-submenu');
-	bootcampDropdown.addEventListener(
-		'click',
-		closeOtherSubmenus(bootcampDropdown)
-	);
+function toggleSubmenu(submenu) {
+	submenu.classList.toggle('show-submenu');
+	closeOtherSubmenus(submenu);
 }
 
-function dropdownPD() {
-	let professionalDevDropdown = document.getElementById(
-		'professional-development'
-	);
-	professionalDevDropdown.classList.toggle('show-submenu');
-	professionalDevDropdown.addEventListener(
-		'click',
-		closeOtherSubmenus(professionalDevDropdown)
-	);
-}
+// Event listeners
 
-function dropdownOutcomes() {
-	let outcomesDropdown = document.getElementById('outcomes');
-	outcomesDropdown.classList.toggle('show-submenu');
-	outcomesDropdown.addEventListener(
-		'click',
-		closeOtherSubmenus(outcomesDropdown)
-	);
-}
+// Main dropdown menu
+mainMenuButton.addEventListener('click', toggleMainMenu);
 
-function dropdownEvents() {
-	let eventsDropdown = document.getElementById('events');
-	eventsDropdown.classList.toggle('show-submenu');
-	eventsDropdown.addEventListener(
-		'click',
-		closeOtherSubmenus(eventsDropdown)
-	);
+// Submenu listener loop
+for (let i = 0; i < submenus.length; i++) {
+	if (submenus[i].id != 'prepare') {
+		let submenuButton = submenus[i].children[0];
+		submenuButton.addEventListener('click', function () {
+			toggleSubmenu(submenus[i]);
+		});
+	}
 }

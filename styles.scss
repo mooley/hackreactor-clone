@@ -4,18 +4,6 @@ $color-1: #ffffff;
 $color-2: #0090d9;
 $color-3: #3d3935;
 
-#red-square {
-	width: 100px;
-	height: 100px;
-
-	position: fixed;
-	background-color: red;
-}
-
-.blue-square {
-	background-color: blue;
-}
-
 body {
 	background-color: $color-1;
 	margin: 0;
@@ -46,10 +34,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	gap: 1rem;
-
-	// .menu-button {
-	// 	display: none;
-	// }
 
 	.submenu-button {
 		display: flex;

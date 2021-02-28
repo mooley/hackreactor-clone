@@ -1,14 +1,3 @@
-#red-square {
-  width: 100px;
-  height: 100px;
-  position: fixed;
-  background-color: red;
-}
-
-.blue-square {
-  background-color: blue;
-}
-
 body {
   background-color: #ffffff;
   margin: 0;
