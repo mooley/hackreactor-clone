@@ -26,6 +26,10 @@ function toggleSubmenu(submenu) {
 	closeOtherSubmenus(submenu);
 }
 
+function changeColor(button) {
+	button.classList.toggle('change-color');
+}
+
 // Event listeners
 
 // Main dropdown menu

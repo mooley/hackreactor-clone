@@ -97,7 +97,8 @@ body {
 
 @media (max-width: 1023px) {
   #navbar {
-    justify-content: space-between;
+    display: block;
+    position: static;
   }
 
   .menu-button {
@@ -111,13 +112,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
+    position: static;
     top: 100px;
+    padding: 0;
+    margin: 0;
   }
   .menu .submenu-button {
     width: 100vw;
     height: 30px;
     left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .menu .submenu-button::after {
+    content: "";
+    position: absolute;
+    width: 95vw;
+    left: 2.5vw;
+    border-style: none none inset none;
+    border-width: 0.1rem;
+    align-self: flex-end;
   }
   .menu .submenu {
     display: none;
@@ -134,10 +149,10 @@ body {
     position: fixed;
     top: 30px;
     right: 50px;
-    order: -1;
   }
   .menu .show-submenu {
     display: block;
+    position: static;
   }
   .menu .show-submenu #bootcamp-dropdown {
     display: block;
@@ -156,8 +171,13 @@ body {
     list-style-type: none;
   }
 
+  .show-menu {
+    display: block;
+    position: static;
+  }
   .show-menu .submenu {
     display: block;
+    position: static;
   }
   .show-menu .submenu .dropdown {
     display: none;
