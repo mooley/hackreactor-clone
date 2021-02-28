@@ -131,24 +131,35 @@ body {
 
 @media (max-width: 1023px) {
 	#navbar {
-		// justify-content: space-between;
-		display: block;
-		position: static;
-	}
-
-	.menu-button {
 		display: block;
 		position: fixed;
-		top: 30px;
-		right: 10px;
+	}
+
+	#company-logo {
+		position: fixed;
+		top: 19px;
+		left: 15px;
+	}
+
+	#hamburger-menu-icon {
+		display: block;
+		position: fixed;
+		top: 1.7rem;
+		right: 0.55rem;
+		fill: $color-2;
+		background: none;
+		border: none;
+
+		img {
+			height: 2rem;
+			width: 3rem;
+		}
 	}
 
 	.menu {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		position: static;
-		top: 100px;
 
 		padding: 0;
 		margin: 0;
@@ -169,8 +180,6 @@ body {
 			position: absolute;
 			width: 95vw;
 			left: 2.5vw;
-
-			// border: solid red;
 
 			border-style: none none inset none;
 			border-width: 0.1rem;
@@ -195,8 +204,10 @@ body {
 
 		#apply-now-button {
 			position: fixed;
-			top: 30px;
-			right: 50px;
+			top: 1.4rem;
+			right: 5.16rem;
+			padding: 0.78rem 1.48rem;
+			font-size: 1rem;
 		}
 
 		.show-submenu {
@@ -218,7 +229,9 @@ body {
 
 	.show-menu {
 		display: block;
-		position: static;
+
+		position: fixed;
+		top: 100px;
 
 		.submenu {
 			display: block;
