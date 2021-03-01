@@ -110,7 +110,7 @@ body {
   #hamburger-menu-icon {
     display: block;
     position: fixed;
-    top: 1.7rem;
+    top: 1.6rem;
     right: 0.55rem;
     fill: #0090d9;
     background: none;
@@ -129,12 +129,17 @@ body {
     margin: 0;
   }
   .menu .submenu-button {
-    width: 100vw;
-    height: 30px;
-    left: 0;
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 2rem;
+    width: 100vw;
+    height: 3.2rem;
+    left: 0;
+    font-weight: 600;
+  }
+  .menu .submenu-button .dropdown-triangle {
+    transform: rotate(-45deg);
+    height: 0;
   }
   .menu .submenu-button::after {
     content: "";
@@ -142,7 +147,7 @@ body {
     width: 95vw;
     left: 2.5vw;
     border-style: none none inset none;
-    border-width: 0.1rem;
+    border-width: 0.185rem;
     align-self: flex-end;
   }
   .menu .submenu {
@@ -152,6 +157,25 @@ body {
     border: none;
     position: static;
     display: block;
+    padding: 0 1rem 0 0.8rem;
+  }
+  .menu .submenu .dropdown li {
+    line-height: 0;
+  }
+  .menu .submenu .dropdown li h2 {
+    font-weight: 600;
+    font-size: 0.625rem;
+    padding: 0;
+    margin: 0;
+  }
+  .menu .submenu .dropdown li :not(h2) {
+    margin: 0;
+    padding-left: 2.8rem;
+  }
+  .menu .submenu .dropdown li:hover :not(h2) {
+    padding-left: 2.8rem;
+    margin: 0;
+    color: #0090d9;
   }
   .menu .submenu:hover .dropdown {
     display: none;
@@ -166,6 +190,13 @@ body {
   .menu .show-submenu {
     display: block;
     position: static;
+  }
+  .menu .show-submenu .submenu-button {
+    color: #0090d9;
+  }
+  .menu .show-submenu .dropdown-triangle {
+    transform: rotate(45deg);
+    height: 1rem;
   }
   .menu .show-submenu #bootcamp-dropdown {
     display: block;
@@ -187,7 +218,7 @@ body {
   .show-menu {
     display: block;
     position: fixed;
-    top: 100px;
+    top: 85px;
   }
   .show-menu .submenu {
     display: block;
@@ -198,7 +229,10 @@ body {
     position: static;
   }
   .show-menu .submenu .dropdown li {
-    line-height: 1.5rem;
+    padding: 1.5rem;
+  }
+  .show-menu .submenu .dropdown li h2 {
+    padding: 0;
   }
 }
 

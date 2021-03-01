@@ -144,7 +144,7 @@ body {
 	#hamburger-menu-icon {
 		display: block;
 		position: fixed;
-		top: 1.7rem;
+		top: 1.6rem;
 		right: 0.55rem;
 		fill: $color-2;
 		background: none;
@@ -165,14 +165,21 @@ body {
 		margin: 0;
 
 		.submenu-button {
-			width: 100vw;
-			height: 30px;
-			left: 0;
-
 			display: flex;
 			justify-content: space-between;
 
-			padding: 0 1rem;
+			padding: 0 2rem;
+
+			width: 100vw;
+			height: 3.2rem;
+			left: 0;
+
+			font-weight: 600;
+
+			.dropdown-triangle {
+				transform: rotate(-45deg);
+				height: 0;
+			}
 		}
 
 		.submenu-button::after {
@@ -182,7 +189,7 @@ body {
 			left: 2.5vw;
 
 			border-style: none none inset none;
-			border-width: 0.1rem;
+			border-width: 0.185rem;
 			align-self: flex-end;
 		}
 
@@ -193,6 +200,30 @@ body {
 				border: none;
 				position: static;
 				display: block;
+				padding: 0 1rem 0 0.8rem;
+
+				li {
+					line-height: 0;
+
+					h2 {
+						font-weight: 600;
+						font-size: 0.625rem;
+
+						padding: 0;
+						margin: 0;
+					}
+				}
+
+				li :not(h2) {
+					margin: 0;
+					padding-left: 2.8rem;
+				}
+
+				li:hover :not(h2) {
+					padding-left: 2.8rem;
+					margin: 0;
+					color: $color-2;
+				}
 			}
 		}
 
@@ -214,6 +245,15 @@ body {
 			display: block;
 			position: static;
 
+			.submenu-button {
+				color: $color-2;
+			}
+
+			.dropdown-triangle {
+				transform: rotate(45deg);
+				height: 1rem;
+			}
+
 			@mixin dropdown-event-listener {
 				display: block;
 				list-style-type: none;
@@ -231,7 +271,7 @@ body {
 		display: block;
 
 		position: fixed;
-		top: 100px;
+		top: 85px;
 
 		.submenu {
 			display: block;
@@ -242,12 +282,13 @@ body {
 				position: static;
 
 				li {
-					line-height: 1.5rem;
+					padding: 1.5rem;
+
+					h2 {
+						padding: 0;
+					}
 				}
 			}
 		}
 	}
 }
-
-// Hovering the submenu button may still be doing something
-// Parent element still defines the dropdown as display:none, that's why it only works with the !important command.
