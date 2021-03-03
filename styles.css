@@ -18,6 +18,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 6rem;
+  position: fixed;
   height: 100px;
   width: 100%;
   background-color: #ffffff;
@@ -31,6 +32,7 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  background-color: #ffffff;
 }
 .menu .submenu-button {
   display: flex;
@@ -59,8 +61,9 @@ img {
   display: none;
   position: absolute;
   top: 100px;
-  padding: 1rem 4rem 2.5rem 2rem;
-  border-radius: 1%;
+  padding: 1rem 3rem 1rem 2rem;
+  margin-top: 3px;
+  border-radius: 2px;
   border-style: ridge none none none;
   border-width: 2px;
   border-color: #0090d9;
@@ -91,12 +94,13 @@ img {
 .menu .submenu .dropdown li:last-child {
   border: none;
 }
-.menu .submenu:hover ul {
+.menu .submenu:hover .dropdown {
   display: block;
   list-style-type: none;
   line-height: 2.5rem;
+  background-color: #ffffff;
 }
-.menu #apply-now-button {
+.menu .apply-now {
   align-self: center;
   padding: 0.8rem 1.18rem;
   background-color: #0090d9;
@@ -107,14 +111,13 @@ img {
   border-radius: 2px;
   transition: background-color 0.2s ease-in-out;
 }
-.menu #apply-now-button:hover {
+.menu .apply-now:hover {
   background-color: #4aaded;
 }
 
 @media (max-width: 1023px) {
   #navbar {
     display: block;
-    position: fixed;
     height: 87px;
   }
 
@@ -193,8 +196,9 @@ img {
   }
   .menu .submenu:hover .dropdown {
     display: none;
+    line-height: 0;
   }
-  .menu #apply-now-button {
+  .menu .apply-now {
     position: fixed;
     top: 1.4rem;
     right: 5.16rem;
@@ -250,27 +254,47 @@ img {
     padding: 0;
   }
 }
+@media (max-width: 409px) {
+  #navbar {
+    height: 148px;
+  }
+
+  #apply-now-button {
+    position: initial;
+    margin-top: 5.75rem;
+    padding: 0.68rem 9.15rem;
+    align-self: center;
+    white-space: nowrap;
+  }
+}
 #welcome-section {
   background-image: url(photos/welcome-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 60.3vh;
+  margin-top: 100px;
+  height: 557px;
   background-color: #0090d9;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 3rem;
   color: #ffffff;
 }
 #welcome-section h1 {
   font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
-  font-size: 2.89rem;
+  font-size: 2.875rem;
   font-weight: 400;
-  margin: 0 23rem;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 6.2rem;
   line-height: 3.8rem;
+  text-align: center;
+}
+#welcome-section h1 #first-break {
+  display: initial;
+}
+#welcome-section h1 #second-break {
+  display: none;
 }
 #welcome-section p {
   font-size: 1.4rem;
@@ -297,13 +321,48 @@ img {
     background-size: cover;
     padding: 0;
     margin: 0;
-    height: initial;
-    height: 487px;
     margin-top: 87px;
   }
+  #welcome-section h1 #first-break {
+    display: none;
+  }
+  #welcome-section h1 #second-break {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  #welcome-section {
+    height: 447px;
+  }
   #welcome-section h1 {
-    margin: 0;
-    padding: 0;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    padding: 9.45rem 0 6rem 0;
+  }
+  #welcome-section h1 br {
+    display: none;
+  }
+  #welcome-section p {
+    display: none;
+  }
+}
+@media (max-width: 409px) {
+  #welcome-section {
+    margin-top: 148px;
+    height: 507px;
+  }
+  #welcome-section h1 {
+    margin-top: 1.05rem;
+  }
+  #welcome-section h1 #first-break {
+    display: block;
+  }
+  #welcome-section h1 #second-break {
+    display: none;
+  }
+  #welcome-section button {
+    padding: 0.66rem 1.3rem;
+    margin-top: 1.18rem;
   }
 }
 
