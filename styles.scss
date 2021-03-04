@@ -333,13 +333,18 @@ img {
 @media (max-width: 409px) {
 	#navbar {
 		height: 148px;
+		box-sizing: border-box;
 	}
 
 	#apply-now-button {
-		position: initial;
-		margin-top: 5.75rem;
-		padding: 0.68rem 9.15rem;
-
+		display: block;
+		position: static;
+		width: 92vw;
+		box-sizing: border-box;
+		margin: 5.75rem 0 0 0;
+		padding: 0;
+		height: 41px;
+		width: 90vw;
 		align-self: center;
 		white-space: nowrap;
 	}
@@ -372,7 +377,7 @@ img {
 
 		margin: 0;
 		padding: 0;
-		padding-top: 6.2rem;
+		padding-top: 6.25rem;
 
 		// width: 970px;
 		// height: 120px;
@@ -390,14 +395,15 @@ img {
 	}
 
 	p {
-		font-size: 1.4rem;
+		font-size: 1.375rem;
+		margin-top: 1.75rem;
 	}
 
 	button {
 		@include button();
 		font-size: 1rem;
-		margin-top: 1rem;
-		// padding: 1rem 3rem;
+		margin: 1rem 0 0 1.5rem;
+		padding: 0.63rem 1.28rem;
 	}
 
 	button:hover {
