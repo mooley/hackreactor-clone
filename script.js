@@ -30,10 +30,15 @@ function changeColor(button) {
 	button.classList.toggle('change-color');
 }
 
+function moveContentDown() {
+	document.getElementById('body').classList.toggle('move-content');
+}
+
 // Event listeners
 
 // Main dropdown menu
 mainMenuButton.addEventListener('click', toggleMainMenu);
+mainMenuButton.addEventListener('click', moveContentDown);
 
 // Submenu listener loop
 for (let i = 0; i < submenus.length; i++) {

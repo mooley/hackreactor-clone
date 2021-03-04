@@ -49,6 +49,7 @@ img {
 	align-items: center;
 	gap: 6rem;
 	position: fixed;
+	top: 0;
 	height: 100px;
 
 	width: 100%;
@@ -168,8 +169,11 @@ img {
 @media (max-width: 1023px) {
 	#navbar {
 		display: block;
-		// position: fixed;
 		height: 87px;
+	}
+
+	.move-content {
+		margin-top: 254px;
 	}
 
 	#company-logo {
@@ -333,20 +337,20 @@ img {
 @media (max-width: 409px) {
 	#navbar {
 		height: 148px;
-		box-sizing: border-box;
 	}
 
 	#apply-now-button {
 		display: block;
-		position: static;
-		width: 92vw;
-		box-sizing: border-box;
-		margin: 5.75rem 0 0 0;
-		padding: 0;
-		height: 41px;
-		width: 90vw;
-		align-self: center;
+		position: fixed;
+		top: 5.75rem;
+		width: 92.6vw;
+		left: 3.7vw;
 		white-space: nowrap;
+		height: 2.563rem;
+	}
+
+	.show-menu {
+		top: 146px;
 	}
 }
 
@@ -378,9 +382,6 @@ img {
 		margin: 0;
 		padding: 0;
 		padding-top: 6.25rem;
-
-		// width: 970px;
-		// height: 120px;
 
 		line-height: 3.8rem;
 		text-align: center;
@@ -457,7 +458,6 @@ img {
 		height: 507px;
 
 		h1 {
-			// padding-top: 10.6rem;
 			margin-top: 1.05rem;
 
 			#first-break {
@@ -472,6 +472,7 @@ img {
 		button {
 			padding: 0.66rem 1.3rem;
 			margin-top: 1.18rem;
+			margin-left: 0;
 		}
 	}
 }
