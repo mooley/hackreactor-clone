@@ -485,4 +485,59 @@ img {
   }
 }
 
+#industry-recognition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#industry-recognition h2 {
+  font-weight: 540;
+  color: #000000;
+  font-size: 1.875rem;
+  font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
+  text-align: center;
+  padding: 3.5rem 0 0 0;
+  margin: 0;
+}
+#industry-recognition p {
+  width: 61rem;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans, DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+  color: #000000;
+  text-align: center;
+}
+@media (max-width: 1023px) {
+  #industry-recognition p {
+    width: 95vw;
+  }
+}
+#industry-recognition #logos-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 2.5rem;
+  row-gap: 2rem;
+  margin: 0;
+  padding: 0;
+  width: 62rem;
+}
+@media (max-width: 1023px) {
+  #industry-recognition #logos-container {
+    width: auto;
+  }
+}
+@media (max-width: 767px) {
+  #industry-recognition #logos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+  }
+  #industry-recognition p {
+    display: none;
+  }
+  #industry-recognition img {
+    width: auto;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -10,6 +10,10 @@ $color-7: #0000000d;
 
 // || Mixins
 
+@mixin debug {
+	border: 1px solid red;
+}
+
 @mixin button {
 	align-self: center;
 
@@ -613,37 +617,68 @@ img {
 
 // || Industry Recognition
 
-// #industry-recognition {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	padding: 0 23rem;
+#industry-recognition {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-// 	h2 {
-// 		font-weight: 500;
-// 		font-size: 1.875rem;
-// 		font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
-// 		padding: 3.5rem 0 0 0;
-// 		margin: 0;
-// 	}
+	h2 {
+		font-weight: 540;
+		color: #000000;
+		font-size: 1.875rem;
+		font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
+		text-align: center;
 
-// 	p {
-// 		font-weight: 400;
-// 		font-size: 1.0625rem;
-// 		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
-// 			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+		padding: 3.5rem 0 0 0;
+		margin: 0;
+	}
 
-// 		text-align: center;
-// 	}
+	p {
+		width: 61rem;
 
-// 	#logos-container {
-// 		display: grid;
-// 		grid-template-columns: repeat(5, 1fr);
+		font-weight: 400;
+		font-size: 1.0625rem;
+		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
+			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
 
-// 		// margin: 0 22rem;
-// 	}
+		color: #000000;
 
-// 	img {
-// 		width: 70%;
-// 	}
-// }
+		text-align: center;
+
+		@media (max-width: 1023px) {
+			width: 95vw;
+		}
+	}
+
+	#logos-container {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		column-gap: 2.5rem;
+		row-gap: 2rem;
+		margin: 0;
+		padding: 0;
+
+		width: 62rem;
+
+		@media (max-width: 1023px) {
+			width: auto;
+		}
+	}
+
+	@media (max-width: 767px) {
+		#logos-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+
+			width: auto;
+		}
+
+		p {
+			display: none;
+		}
+
+		img {
+			width: auto;
+		}
+	}
+}
