@@ -7,6 +7,7 @@ $color-4: #4aaded;
 $color-5: #d8d8d8;
 $color-6: #6d7278;
 $color-7: #0000000d;
+$color-8: #00000059;
 
 // || Mixins
 
@@ -737,6 +738,7 @@ $image-width-desktop: 19rem;
 $image-width-mobile-midsize: 28.75rem;
 $image-width-mobile-small-screens: 90vw;
 $image-width-midsize-screens: 45vw;
+// $cards-height: 40.125rem;
 $cards-gap: 1.5rem;
 
 .our-bootcamps {
@@ -747,14 +749,14 @@ $cards-gap: 1.5rem;
 
 .cards-container {
 	display: flex;
+	align-items: flex-start;
 	gap: $cards-gap;
-
-	box-sizing: border-box;
 
 	overflow-x: auto;
 
 	scroll-snap-type: x mandatory;
-	width: $image-width-desktop * 3 + $cards-gap * 2;
+	width: $image-width-desktop * 3 + $cards-gap * 2 + 0.3rem;
+	height: 41rem;
 
 	@media (max-width: 989px) {
 		width: $image-width-midsize-screens * 2;
@@ -781,10 +783,77 @@ $cards-gap: 1.5rem;
 }
 
 .bootcamp-info-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
 	flex-shrink: 0;
 	scroll-snap-align: start;
 
 	width: $image-width-desktop;
+	height: 37rem;
+
+	box-shadow: 1px 1px 3px 0 $color-8;
+	margin: 0 0 1rem 0;
+	padding: 0 0 3rem 0;
+
+	user-select: none;
+
+	h2 {
+		font-size: 1.875rem;
+		font-weight: 400;
+		font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
+		text-align: center;
+
+		padding: 0;
+		margin: 0;
+	}
+
+	h3 {
+		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
+			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+		font-size: 1.375rem;
+		font-weight: 400;
+		text-align: center;
+
+		padding: 0;
+		margin: 0;
+
+		width: 80%;
+	}
+
+	p {
+		line-height: 1.44;
+		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
+			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+		font-size: 1rem;
+		width: 85%;
+
+		padding: 0;
+		margin: 0;
+	}
+
+	button {
+		@include button();
+		background-color: $color-1;
+		color: $color-2;
+
+		width: 218px;
+		height: 39px;
+
+		font-size: 1rem;
+		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
+			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+
+		line-height: 0.8rem;
+	}
+
+	button:hover {
+		color: $color-1;
+		background-color: $color-2;
+		cursor: pointer;
+	}
 
 	@media (max-width: 989px) {
 		width: $image-width-midsize-screens;
@@ -806,6 +875,9 @@ $cards-gap: 1.5rem;
 
 	width: $image-width-desktop;
 	height: 19rem;
+
+	padding: 0;
+	margin: 0;
 
 	@media (max-width: 989px) {
 		width: $image-width-midsize-screens;
