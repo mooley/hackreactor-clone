@@ -730,3 +730,92 @@ img {
 		height: 50vw;
 	}
 }
+
+// || Our Bootcamps Section
+
+$image-width-desktop: 19rem;
+$image-width-mobile-midsize: 28.75rem;
+$image-width-mobile-small-screens: 90vw;
+$image-width-midsize-screens: 45vw;
+$cards-gap: 1.5rem;
+
+.our-bootcamps {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cards-container {
+	display: flex;
+	gap: $cards-gap;
+
+	box-sizing: border-box;
+
+	overflow-x: auto;
+
+	scroll-snap-type: x mandatory;
+	width: $image-width-desktop * 3 + $cards-gap * 2;
+
+	@media (max-width: 989px) {
+		width: $image-width-midsize-screens * 2;
+	}
+
+	@media (max-width: 767px) {
+		width: $image-width-mobile-midsize;
+	}
+
+	@media (max-width: 500px) {
+		width: $image-width-mobile-small-screens;
+	}
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.cards-container::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.cards-container {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.bootcamp-info-card {
+	flex-shrink: 0;
+	scroll-snap-align: start;
+
+	width: $image-width-desktop;
+
+	@media (max-width: 989px) {
+		width: $image-width-midsize-screens;
+	}
+
+	@media (max-width: 767px) {
+		width: $image-width-mobile-midsize;
+	}
+
+	@media (max-width: 500px) {
+		width: $image-width-mobile-small-screens;
+	}
+}
+
+.students-image-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	width: $image-width-desktop;
+	height: 19rem;
+
+	@media (max-width: 989px) {
+		width: $image-width-midsize-screens;
+	}
+
+	@media (max-width: 767px) {
+		width: $image-width-mobile-midsize;
+	}
+
+	@media (max-width: 500px) {
+		width: $image-width-mobile-small-screens;
+	}
+}
