@@ -899,16 +899,18 @@ $cards-gap: 1.5rem;
 	display: grid;
 	grid-template-areas:
 		'photo title title'
-		'photo intro gs-button';
-	justify-content: center;
-	align-items: center;
+		'photo intro gs-button'
+		'photo . gs-button';
 	align-self: center;
 
-	// border-style: solid;
+	margin-top: 5rem;
+	padding: 0;
+
 	border-width: 1px 3px;
 	box-shadow: 1px 1px 3px 0 $color-8;
 
 	width: 970px;
+	height: 174px;
 
 	.syllabus-image-container {
 		grid-area: photo;
@@ -916,20 +918,45 @@ $cards-gap: 1.5rem;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		width: 100px;
-		height: 100px;
+		width: 175px;
+		height: 174px;
+
+		@media (max-width: 767px) {
+			width: auto;
+			height: 278px;
+		}
 	}
 
 	h2 {
 		grid-area: title;
+		font-weight: 400;
+		font-size: 1.375rem;
+		font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
+
+		margin: 1.5rem 0 0 1rem;
 	}
 
-	.syllabus-description p {
+	p {
 		grid-area: intro;
+		width: 90%;
+		line-height: 1.44rem;
+		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
+			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+		font-size: 1rem;
+
+		margin: 0.5rem 0 0 1rem;
 	}
 
-	.syllabus-description button {
+	button {
 		grid-area: gs-button;
+		width: 162px;
+		font-size: 1rem;
+
+		margin: 0 1.5rem 4rem 0;
+
+		@media (max-width: 767px) {
+			margin: 4.5rem 1.5rem 1.5rem 0;
+		}
 	}
 
 	button {
@@ -941,6 +968,7 @@ $cards-gap: 1.5rem;
 	button:hover {
 		background-color: $color-2;
 		color: $color-1;
+		cursor: pointer;
 	}
 
 	@media (max-width: 1023px) {
@@ -950,5 +978,8 @@ $cards-gap: 1.5rem;
 	@media (max-width: 767px) {
 		display: flex;
 		flex-direction: column;
+
+		width: 92vw;
+		height: initial;
 	}
 }

@@ -736,30 +736,54 @@ img {
 
 .syllabus {
   display: grid;
-  grid-template-areas: "photo title title" "photo intro gs-button";
-  justify-content: center;
-  align-items: center;
+  grid-template-areas: "photo title title" "photo intro gs-button" "photo . gs-button";
   align-self: center;
+  margin-top: 5rem;
+  padding: 0;
   border-width: 1px 3px;
   box-shadow: 1px 1px 3px 0 #00000059;
   width: 970px;
+  height: 174px;
 }
 .syllabus .syllabus-image-container {
   grid-area: photo;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100px;
-  height: 100px;
+  width: 175px;
+  height: 174px;
+}
+@media (max-width: 767px) {
+  .syllabus .syllabus-image-container {
+    width: auto;
+    height: 278px;
+  }
 }
 .syllabus h2 {
   grid-area: title;
+  font-weight: 400;
+  font-size: 1.375rem;
+  font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
+  margin: 1.5rem 0 0 1rem;
 }
-.syllabus .syllabus-description p {
+.syllabus p {
   grid-area: intro;
+  width: 90%;
+  line-height: 1.44rem;
+  font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans, DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem 0 0 1rem;
 }
-.syllabus .syllabus-description button {
+.syllabus button {
   grid-area: gs-button;
+  width: 162px;
+  font-size: 1rem;
+  margin: 0 1.5rem 4rem 0;
+}
+@media (max-width: 767px) {
+  .syllabus button {
+    margin: 4.5rem 1.5rem 1.5rem 0;
+  }
 }
 .syllabus button {
   align-self: center;
@@ -777,6 +801,7 @@ img {
 .syllabus button:hover {
   background-color: #0090d9;
   color: #ffffff;
+  cursor: pointer;
 }
 @media (max-width: 1023px) {
   .syllabus {
@@ -787,6 +812,8 @@ img {
   .syllabus {
     display: flex;
     flex-direction: column;
+    width: 92vw;
+    height: initial;
   }
 }
 
