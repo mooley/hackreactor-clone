@@ -817,4 +817,94 @@ img {
   }
 }
 
+#students-reviews-and-reports {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  box-sizing: border-box;
+  margin-top: 5rem;
+  width: 970px;
+  height: 494px;
+  align-self: center;
+}
+@media (max-width: 1023px) {
+  #students-reviews-and-reports {
+    flex-direction: column;
+    width: 95vw;
+  }
+}
+
+#students-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.student-review {
+  display: flex;
+  box-shadow: 1px 1px 3px 0 #00000059;
+  width: 616px;
+}
+.student-review img {
+  object-fit: cover;
+  width: 130px;
+}
+@media (max-width: 409px) {
+  .student-review img {
+    width: 100%;
+    padding: 5vw;
+    box-sizing: border-box;
+  }
+}
+.student-review p {
+  padding: 1.5rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+}
+.student-review p i {
+  font-size: 14px;
+}
+@media (max-width: 1023px) {
+  .student-review {
+    width: auto;
+  }
+}
+@media (max-width: 409px) {
+  .student-review {
+    flex-direction: column;
+  }
+}
+
+.reports {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 1px 1px 3px 0 #00000059;
+  padding: 1.5rem;
+  margin: 0;
+}
+.reports img {
+  height: 106px;
+}
+@media (max-width: 1023px) {
+  .reports img {
+    height: auto;
+    width: 40vw;
+    padding: 4rem 0;
+  }
+}
+@media (max-width: 410px) {
+  .reports img {
+    padding: 0.5rem;
+  }
+}
+.reports p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
 /*# sourceMappingURL=styles.css.map */
