@@ -756,6 +756,7 @@ $cards-gap: 1.5rem;
 
 	scroll-snap-type: x mandatory;
 	width: $image-width-desktop * 3 + $cards-gap * 2 + 0.3rem;
+	padding-left: 0.05rem;
 	height: 41rem;
 
 	@media (max-width: 989px) {
@@ -889,5 +890,65 @@ $cards-gap: 1.5rem;
 
 	@media (max-width: 500px) {
 		width: $image-width-mobile-small-screens;
+	}
+}
+
+// || Syllabus Section
+
+.syllabus {
+	display: grid;
+	grid-template-areas:
+		'photo title title'
+		'photo intro gs-button';
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+
+	// border-style: solid;
+	border-width: 1px 3px;
+	box-shadow: 1px 1px 3px 0 $color-8;
+
+	width: 970px;
+
+	.syllabus-image-container {
+		grid-area: photo;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 100px;
+		height: 100px;
+	}
+
+	h2 {
+		grid-area: title;
+	}
+
+	.syllabus-description p {
+		grid-area: intro;
+	}
+
+	.syllabus-description button {
+		grid-area: gs-button;
+	}
+
+	button {
+		@include button();
+		color: $color-2;
+		background-color: $color-1;
+	}
+
+	button:hover {
+		background-color: $color-2;
+		color: $color-1;
+	}
+
+	@media (max-width: 1023px) {
+		width: 95vw;
+	}
+
+	@media (max-width: 767px) {
+		display: flex;
+		flex-direction: column;
 	}
 }
