@@ -995,7 +995,6 @@ $cards-gap: 1.5rem;
 	margin-top: 5rem;
 
 	width: 970px;
-	height: 494px;
 
 	align-self: center;
 
@@ -1056,7 +1055,6 @@ $cards-gap: 1.5rem;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	// gap: 1rem;
 	box-shadow: 1px 1px 3px 0 $color-8;
 	padding: 1.5rem;
 	margin: 0;
@@ -1079,5 +1077,85 @@ $cards-gap: 1.5rem;
 		text-align: center;
 		padding: 0;
 		margin: 0;
+	}
+}
+
+// || Press articles
+
+#press-articles {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	gap: 1.5rem;
+}
+
+.article {
+	display: grid;
+	grid-template-areas:
+		'photo title title'
+		'photo description button';
+
+	width: 970px;
+	box-shadow: 1px 1px 3px 0 $color-8;
+
+	@media (max-width: 1023px) {
+		width: 95vw;
+	}
+
+	@media (max-width: 767px) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	img {
+		grid-area: photo;
+		object-fit: cover;
+		width: 175px;
+		height: 100%;
+
+		@media (max-width: 767px) {
+			width: 95vw;
+			height: 278px;
+		}
+	}
+
+	h3 {
+		grid-area: title;
+		padding: 0 1.5rem;
+		margin: 1.5rem 0 0 0;
+
+		font-size: 1.375rem;
+		font-weight: 400;
+		font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
+	}
+	p {
+		grid-area: description;
+		padding: 0;
+		margin: 0.5rem 0 1.5rem 1.5rem;
+
+		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
+			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+		font-size: 1rem;
+		line-height: 1.44rem;
+	}
+	button {
+		grid-area: button;
+		@include button();
+		background-color: $color-1;
+		color: $color-2;
+		margin: 1rem 1.5rem;
+		width: 161px;
+		height: 40px;
+
+		align-self: flex-start;
+
+		@media (max-width: 767px) {
+			align-self: center;
+		}
+	}
+
+	button:hover {
+		@include button();
 	}
 }
