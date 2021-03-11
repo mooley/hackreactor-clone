@@ -1181,6 +1181,11 @@ img {
   align-items: center;
   margin-top: 5rem;
 }
+#get-started h2 {
+  font-weight: 500;
+  font-size: 1.875rem;
+  font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
+}
 #get-started button {
   align-self: center;
   padding: 0.8rem 1.18rem;
@@ -1191,6 +1196,14 @@ img {
   border-color: #0090d9;
   border-radius: 2px;
   transition: background-color 0.2s ease-in-out;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.5625rem 1.5rem;
+}
+@media (max-width: 362px) {
+  #get-started button {
+    width: 95vw;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
