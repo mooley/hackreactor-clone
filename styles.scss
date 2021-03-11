@@ -572,37 +572,51 @@ img {
 		font-size: 1.5rem;
 		font-weight: 400;
 
-		width: 61rem;
+		width: 970px;
+
+		margin: 1rem 0 0 0;
+		padding: 0;
 	}
 
 	p {
 		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
 			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
 		font-size: 1.25rem;
-		width: 61rem;
+		width: 970px;
+
+		margin: 1rem 0 0 0;
+		padding: 0;
 	}
 
 	button {
 		@include button();
 		padding-left: 1.8rem;
 		padding-right: 1.8rem;
+
+		margin: 1rem 845px 0 0;
+	}
+
+	button:hover {
+		background-color: $color-4;
 	}
 
 	@media (max-width: 1023px) {
+		align-items: flex-start;
+
 		h2 {
 			width: 95vw;
-			// padding: 0 0 0 1rem;
-			// margin: 1rem 0 0 0;
+			margin-left: 0.5rem;
 		}
 
 		p {
 			width: 95vw;
-			// padding-left: 1rem;
+			margin-left: 0.5rem;
 		}
 
 		button {
 			align-self: flex-start;
 			margin-left: 0.5rem;
+			margin-right: 0;
 		}
 	}
 
@@ -745,6 +759,12 @@ $cards-gap: 1.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	h2 {
+		font-weight: 500;
+		font-size: 1.875rem;
+		font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
+	}
 }
 
 .cards-container {
@@ -1042,7 +1062,6 @@ $cards-gap: 1.5rem;
 
 	@media (max-width: 1023px) {
 		width: auto;
-		// padding: 1rem;
 	}
 
 	@media (max-width: 409px) {
@@ -1088,6 +1107,12 @@ $cards-gap: 1.5rem;
 	align-items: center;
 
 	gap: 1.5rem;
+
+	h2 {
+		font-weight: 500;
+		font-size: 1.875rem;
+		font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
+	}
 }
 
 .article {
@@ -1156,6 +1181,176 @@ $cards-gap: 1.5rem;
 	}
 
 	button:hover {
+		@include button();
+	}
+}
+
+// || Hack Reactor in the News
+
+#news {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin-top: 3rem;
+
+	h2 {
+		font-weight: 500;
+		font-size: 1.875rem;
+		font-family: Charter, Sylfaen, Cambria, Georgia, Times, serif;
+	}
+}
+
+.news-container {
+	display: flex;
+	justify-content: flex-start;
+	gap: 1.5rem;
+
+	width: 980px;
+	height: 549px;
+	padding: 0.5rem;
+	margin: 0;
+	box-sizing: border-box;
+
+	user-select: none;
+
+	// @include debug();
+
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+
+	@media (max-width: 1023px) {
+		width: 95vw;
+	}
+
+	@media (max-width: 989px) {
+		width: 919 px;
+		height: 526px;
+	}
+
+	@media (max-width: 767px) {
+		width: 470px;
+	}
+
+	@media (max-width: 409px) {
+		width: 95vw;
+		height: auto;
+	}
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.news-container::-webkit-scrollbar {
+	display: none;
+}
+
+.news-article {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	box-shadow: 1px 1px 3px 0 $color-8;
+
+	width: 304px;
+	box-sizing: border-box;
+	scroll-snap-align: start;
+
+	@media (max-width: 989px) {
+		justify-content: center;
+
+		width: 46vw;
+		gap: 0;
+	}
+
+	@media (max-width: 767px) {
+		width: 460px;
+	}
+
+	@media (max-width: 409px) {
+		width: 95vw;
+		height: auto;
+	}
+
+	img {
+		object-fit: cover;
+		width: 304px;
+
+		@media (max-width: 989px) {
+			object-position: center 20%;
+			width: 46vw;
+			height: 304px;
+		}
+
+		@media (max-width: 767px) {
+			width: 460px;
+		}
+
+		@media (max-width: 409px) {
+			width: 95vw;
+		}
+	}
+
+	p {
+		display: grid;
+		place-items: start center;
+		align-self: center;
+
+		box-sizing: border-box;
+
+		width: 256px;
+		height: 90px;
+
+		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
+			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 1.45rem;
+
+		@media (max-width: 989px) {
+			width: 46vw;
+			height: 69px;
+			padding: 0 1.5rem;
+		}
+
+		@media (max-width: 767px) {
+			width: 460px;
+		}
+
+		@media (max-width: 409px) {
+			width: 95vw;
+			height: auto;
+		}
+	}
+
+	button {
+		@include button();
+		background-color: $color-1;
+		color: $color-2;
+		margin: 0;
+		width: 218px;
+		font-size: 1rem;
+	}
+
+	button:hover {
+		background-color: $color-2;
+		color: $color-1;
+	}
+}
+
+// || Get Started
+
+#get-started {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin-top: 5rem;
+
+	button {
 		@include button();
 	}
 }
