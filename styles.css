@@ -1206,4 +1206,73 @@ img {
   }
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0090d9;
+  color: #ffffff;
+  margin-top: 6rem;
+}
+
+#top-footer {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 970px;
+  padding: 1rem 0;
+  border-style: none none solid none;
+  border-width: 1px;
+  border-color: #4aaded;
+}
+#top-footer path {
+  fill: #ffffff;
+}
+#top-footer p {
+  margin-left: 18rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans, DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+}
+#top-footer button {
+  align-self: center;
+  padding: 0.8rem 1.18rem;
+  background-color: #0090d9;
+  color: #ffffff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #0090d9;
+  border-radius: 2px;
+  transition: background-color 0.2s ease-in-out;
+  border-color: #ffffff;
+}
+
+#bottom-footer {
+  display: flex;
+}
+
+.social ul {
+  display: flex;
+  gap: 3rem;
+}
+.social li {
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: solid #ffffff 1px;
+  height: 16px;
+  width: 16px;
+}
+.social li path {
+  transition: fill 0.2s ease-in-out;
+}
+.social li:hover {
+  background-color: #ffffff;
+}
+.social li:hover path {
+  fill: #0090d9;
+}
+.social path {
+  fill: #ffffff;
+}
+
 /*# sourceMappingURL=styles.css.map */
