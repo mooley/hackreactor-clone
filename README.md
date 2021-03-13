@@ -3,6 +3,8 @@
 This clone website is done for study purposes only.
 Any feedback would be greatly appretiated.
 
+This is the first website I finish that is not part of the freeCodeCamp curriculum. I know the code is bad, but the experience gave me good ideas on how to approach the building process of websites in the future.
+
 # Technologies used
 
 My objective is to clone the website with pure HTML and CSS when possible. So far I've had to add a few lines of JS to get the dropdown menus functionality.
