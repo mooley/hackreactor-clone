@@ -8,6 +8,7 @@ $color-5: #d8d8d8;
 $color-6: #6d7278;
 $color-7: #0000000d;
 $color-8: #00000059;
+$color-9: #0078b5;
 
 // || Mixins
 
@@ -1374,75 +1375,264 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-between;
 
 	background-color: $color-2;
 	color: $color-1;
-	margin-top: 6rem;
-}
-
-#top-footer {
-	display: flex;
-	justify-content: space-between;
+	height: 435px;
+	margin-top: 5rem;
 
 	box-sizing: border-box;
-	width: 970px;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		a {
+			text-decoration: none;
+			color: $color-1;
+		}
+	}
+
+	@media (max-width: 767px) {
+		height: initial;
+	}
+}
+
+.top-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
 	padding: 1rem 0;
+	width: 970px;
 
 	border-style: none none solid none;
-	border-width: 1px;
 	border-color: $color-4;
+	border-width: 1px;
 
-	path {
-		fill: $color-1;
+	.top-footer-info {
+		display: flex;
+		gap: 1rem;
+
+		@media (max-width: 767px) {
+			padding: 1rem 0 0 0;
+		}
 	}
 
 	p {
-		margin-left: 18rem;
-		font-size: 1rem;
-		font-weight: 600;
 		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
 			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+		font-size: 1rem;
+		font-weight: 700;
 	}
 
 	button {
 		@include button();
-		border-color: $color-1;
+		border: 1px solid $color-1;
+		width: 115px;
+		height: 41px;
+		font-size: 16px;
+		padding: 0;
+		margin: 0;
+		white-space: pre;
+
+		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
+			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+	}
+
+	button:hover {
+		color: black;
+		background-color: $color-1;
+		cursor: pointer;
+	}
+
+	@media (max-width: 1023px) {
+		width: 95vw;
+	}
+
+	@media (max-width: 767px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		svg {
+			border: 1px $color-4;
+			border-style: none none solid none;
+			width: 100%;
+			padding: 0.5rem 0 1.5rem 0;
+		}
 	}
 }
 
-#bottom-footer {
+.bottom-footer {
 	display: flex;
+	justify-content: space-between;
+
+	width: 970px;
+
+	box-sizing: border-box;
+
+	h2 {
+		font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
+			DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+		font-size: 1rem;
+		font-weight: 700;
+	}
+
+	@media (max-width: 1023px) {
+		width: 95vw;
+	}
+
+	@media (max-width: 767px) {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
 }
 
-$icon-side: 16px;
+.bottom-footer > div:not(.reviews-and-social) {
+	h2 {
+		margin-top: 2rem;
+	}
 
-.social {
+	ul {
+		line-height: 3rem;
+	}
+
+	@media (max-width: 767px) {
+		border: 1px $color-4;
+		border-style: none none solid none;
+		width: 95vw;
+		padding-bottom: 1rem;
+	}
+}
+
+.reviews-and-social {
+	width: 308.64px;
+
+	@media (max-width: 767px) {
+		padding-bottom: 2rem;
+		width: 95vw;
+	}
+}
+
+.reviews {
+	margin: 2rem 0 0 0;
+
+	h2 {
+		margin: 1.5rem 0;
+	}
+
 	ul {
 		display: flex;
-		gap: 3rem;
+		flex-direction: row;
+		gap: 1rem;
+	}
+}
+.social {
+	display: flex;
+	flex-direction: row;
+
+	margin-top: 1rem;
+	box-sizing: border-box;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.reviews ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.social {
+	display: flex;
+	flex-direction: column;
+
+	box-sizing: border-box;
+
+	ul {
+		display: flex;
+		gap: 1rem;
+
+		@media (max-width: 767px) {
+			justify-content: center;
+			gap: 3rem;
+		}
 	}
 
 	li {
-		padding: 0.5rem;
 		border-radius: 50%;
 		border: solid $color-1 1px;
-		height: $icon-side;
-		width: $icon-side;
+		width: 16px;
+		height: 16px;
+		padding: 6px;
 
-		path {
-			transition: fill 0.2s ease-in-out;
-		}
+		display: grid;
+		place-items: left center;
+
+		transition: all 0.2s ease-in-out;
 	}
 
 	li:hover {
 		background-color: $color-1;
+		cursor: pointer;
 
 		path {
 			fill: $color-2;
 		}
 	}
 
+	a {
+		text-decoration: none;
+	}
+
 	path {
 		fill: $color-1;
+	}
+}
+
+#copyright {
+	display: flex;
+	justify-content: center;
+
+	background-color: $color-9;
+	width: 100%;
+
+	border: 1px $color-4;
+	border-style: solid none none none;
+}
+
+.copyright-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	height: 71px;
+	width: 970px;
+
+	@media (max-width: 767px) {
+		width: 95vw;
+	}
+
+	.terms-and-privacy {
+		a {
+			text-decoration: none;
+			color: $color-3;
+			font-size: 0.875rem;
+			font-family: Segoe UI, Candara, PT Sans, Bitstream Vera Sans,
+				DejaVu Sans, Trebuchet MS, Verdana, Verdana Ref, sans-serif;
+		}
+	}
+
+	a:hover {
+		color: $color-1;
 	}
 }
